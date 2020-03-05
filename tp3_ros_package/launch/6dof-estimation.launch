@@ -1,0 +1,10 @@
+<launch>
+	<node pkg="tp3_ros_package" type="6dof-estimation.py" name="myestim_node" output="screen" />
+
+	<node pkg="rviz" type="rviz" name="rviz_node" output="screen" required="true" args="-d $(find tp3_ros_package)/cfg/tp-3.rviz"  />
+
+	<!-- Put gazebo 6DOF world launch -->
+	<include file="$(find turtlebot_gazebo)/launch/turtlebot_6DOF_estimation.launch" />
+
+	<!-- <include file="$(find tp2_ros_package)/launch/turtlebot_teleoperation.launch" /> -->
+</launch>

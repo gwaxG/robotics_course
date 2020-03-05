@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+  <launch>
+
+    <rosparam>
+       forward: u
+       backward: j
+       left: h
+       right: k
+       increase: f
+       decrease: s
+       exit: e
+    </rosparam>
+
+    <node pkg="TP2" type="teleoperation_node.py" name="teleoperation" />
+
+  </launch>
+

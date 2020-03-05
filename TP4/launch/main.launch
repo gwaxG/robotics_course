@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+  <launch>
+    <rosparam>
+       connectivity: 4
+    </rosparam>
+
+    <node pkg="TP4" type="path_finder.py" name="finder" />
+
+  </launch>
+
