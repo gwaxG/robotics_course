@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
-<launch>
+<launch><rosparam>
+    mode: circle
+  </rosparam>
   <!-- <arg name="world_file"  default="$(env TURTLEBOT_GAZEBO_WORLD_FILE)"/> -->
   <arg name="world_file"  default="$(find TP5)/worlds/TP5.world"/>
 
@@ -36,9 +38,5 @@
     <remap from="image" to="/camera/depth/image_raw"/>
     <remap from="scan" to="/scan"/>
   </node>
-
-
-  <include file="$(find TP5)/launch/ar_track_usbcam_sim.launch"/> 
-
 
 </launch>

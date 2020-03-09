@@ -14,18 +14,6 @@
       </attenuation>
       <direction>0.5 0.1 -0.9</direction>
     </light>
-    <light type="point" name="point">
-      <pose>1 0 2 0 0 0</pose>
-      <diffuse>1 1 1 1</diffuse>
-      <specular>.1 .1 .1 1</specular>
-      <attenuation>
-        <range>20</range>
-        <linear>0.8</linear>
-        <constant>0.8</constant>
-        <quadratic>0.01</quadratic>
-      </attenuation>
-      <cast_shadows>false</cast_shadows>
-    </light>
 
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
@@ -632,8 +620,31 @@
         </visual>
       </link>
     </model>
+    <light type="point" name="point1">
+      <pose>2.0 1.5 0.5 0 0 0</pose>
+       <diffuse>1 1 1 1</diffuse>
+      <specular>.1 .1 .1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <linear>0.2</linear>
+        <constant>0.8</constant>
+        <quadratic>0.01</quadratic>
+      </attenuation>
+      <cast_shadows>false</cast_shadows>
+    </light>
 
-
+    <light type="point" name="point2">
+      <pose>2.0 -1.5 0.5 0 0 0</pose>
+       <diffuse>1 1 1 1</diffuse>
+      <specular>.1 .1 .1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <linear>0.2</linear>
+        <constant>0.8</constant>
+        <quadratic>0.01</quadratic>
+      </attenuation>
+      <cast_shadows>false</cast_shadows>
+    </light>
 
   </world>
 </sdf>
