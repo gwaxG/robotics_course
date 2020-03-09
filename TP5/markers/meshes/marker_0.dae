@@ -102,21 +102,21 @@
     </light>
   </library_lights>
   <library_images>
-    <image id="MarkerData_0_png" name="MarkerData_0_png">
-      <init_from>MarkerData_0.png</init_from>
+    <image id="circle_png" name="circle_png">
+      <init_from>circle.png</init_from>
     </image>
   </library_images>
   <library_effects>
     <effect id="Material_001-effect">
       <profile_COMMON>
-        <newparam sid="MarkerData_0_png-surface">
+        <newparam sid="circle_png-surface">
           <surface type="2D">
-            <init_from>MarkerData_0_png</init_from>
+            <init_from>circle_png</init_from>
           </surface>
         </newparam>
-        <newparam sid="MarkerData_0_png-sampler">
+        <newparam sid="circle_png-sampler">
           <sampler2D>
-            <source>MarkerData_0_png-surface</source>
+            <source>circle_png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -128,7 +128,7 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <texture texture="MarkerData_0_png-sampler"/>
+              <texture texture="circle_png-sampler"/>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>

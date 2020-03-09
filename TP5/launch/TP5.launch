@@ -38,7 +38,7 @@
   </node>
 
 
-
+  <include file="$(find TP5)/launch/ar_track_usbcam_sim.launch"/> 
 
 
 </launch>
