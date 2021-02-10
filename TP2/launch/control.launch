@@ -1,15 +1,12 @@
 <?xml version="1.0"?>
   <launch>
-
-    <rosparam>
-       forward: u
-       backward: j
-       left: h
-       right: k
-       increase: f
-       decrease: s
-       exit: e
-    </rosparam>
+    <param name="forward" type="str" value="u" />
+    <param name="backward" type="str" value="j" />
+    <param name="left" type="str" value="h" />
+    <param name="righr" type="str" value="k" />
+    <param name="increase" type="str" value="f" />
+    <param name="decrease" type="str" value="s" />
+    <param name="exit" type="str" value="e" />
 
     <node pkg="TP2" type="teleoperation_node.py" name="teleoperation" />
 

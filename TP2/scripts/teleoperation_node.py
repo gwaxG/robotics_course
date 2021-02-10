@@ -43,10 +43,10 @@ class Teleoperation_Node:
                 msg.angular.z = -vel*3
             elif k == moves['increase']:
                 if vel <= 2.0:
-                    vel += DELTA
+                    vel += vel*0.1
             elif k == moves['decrease']:
                 if vel > 0.0:
-                    vel -= DELTA
+                    vel -= vel*0.1
             elif k == moves['exit']:
                 exit()
             publisher.publish(msg)
