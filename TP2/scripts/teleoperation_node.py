@@ -14,7 +14,7 @@ from geometry_msgs.msg import Twist
 class Teleoperation_Node:
     def __init__(self, node_name):
         rospy.init_node(node_name)
-        publisher = rospy.Publisher('/cmd_vel_mux/input/navi', Twist, queue_size=10)
+        publisher = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
         msg = Twist()
         moves = {
             'forward': rospy.get_param('forward'),
@@ -23,6 +23,7 @@ class Teleoperation_Node:
             'right': rospy.get_param('right'),
             'increase': rospy.get_param('increase'),
             'decrease': rospy.get_param('decrease'),
+            'stop': rospy.get_param('stop'),
             'exit': rospy.get_param('exit'),
         }
         vel = 0.2
@@ -43,10 +44,15 @@ class Teleoperation_Node:
                 msg.angular.z = -vel*3
             elif k == moves['increase']:
                 if vel <= 2.0:
-                    vel += vel*0.1
+                    msg.linear.x += 0.1 * msg.linear.x
+                    msg.angular.z += 0.1 * msg.angular.z
             elif k == moves['decrease']:
                 if vel > 0.0:
-                    vel -= vel*0.1
+                    msg.linear.x -= 0.1 * msg.linear.x
+                    msg.angular.z -= 0.1 * msg.angular.z
+            elif k == moves['stop']:
+                msg.linear.x = 0
+                msg.angular.z = 0
             elif k == moves['exit']:
                 exit()
             publisher.publish(msg)

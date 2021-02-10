@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
   <launch>
-    <param name="forward" type="str" value="u" />
-    <param name="backward" type="str" value="j" />
-    <param name="left" type="str" value="h" />
-    <param name="right" type="str" value="k" />
-    <param name="increase" type="str" value="f" />
-    <param name="decrease" type="str" value="s" />
-    <param name="exit" type="str" value="e" />
-
+    <param name="forward" type="str" value="z" />
+    <param name="backward" type="str" value="s" />
+    <param name="left" type="str" value="q" />
+    <param name="right" type="str" value="d" />
+    <param name="increase" type="str" value="a" />
+    <param name="decrease" type="str" value="e" />
+    <param name="exit" type="str" value="x" />
+    <param name="stop" type="str" value="r" />
     <node pkg="TP2" type="teleoperation_node.py" name="teleoperation" />
 
   </launch>
+
 
