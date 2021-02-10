@@ -3,7 +3,7 @@
     <param name="forward" type="str" value="u" />
     <param name="backward" type="str" value="j" />
     <param name="left" type="str" value="h" />
-    <param name="righr" type="str" value="k" />
+    <param name="right" type="str" value="k" />
     <param name="increase" type="str" value="f" />
     <param name="decrease" type="str" value="s" />
     <param name="exit" type="str" value="e" />
